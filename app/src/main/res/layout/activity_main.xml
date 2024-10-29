@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"
+        android:textColor="#FFFF"
         android:layout_marginBottom="16dp"/>
 
     <!-- Register Link -->
@@ -58,9 +58,10 @@
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/register"
         android:layout_gravity="center"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:text="@string/register" />
 
 </LinearLayout>

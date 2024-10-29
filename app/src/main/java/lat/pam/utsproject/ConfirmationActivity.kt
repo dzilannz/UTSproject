@@ -1,6 +1,8 @@
 package lat.pam.utsproject
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,9 +20,19 @@ class ConfirmationActivity : AppCompatActivity() {
         val name = intent.getStringExtra("name")
         val notes = intent.getStringExtra("notes")
 
-        // Menampilkan data yang diterima
-        val confirmationTextView: TextView = findViewById(R.id.confirmationTextView)
-        confirmationTextView.text = "Order placed for $servings servings of $foodName by $name.\nNotes: $notes"
+        findViewById<TextView>(R.id.tvFoodName).text = "Food Name: $foodName"
+        findViewById<TextView>(R.id.tvServings).text = "Number of Servings: $servings pax"
+        findViewById<TextView>(R.id.tvOrderingName).text = "Ordering Name: $name"
+        findViewById<TextView>(R.id.tvAdditionalNotes).text = "Additional Notes: $notes"
+
+        val backToMenuButton: Button = findViewById(R.id.backtoMenu)
+        backToMenuButton.setOnClickListener {
+            // Intent ke ListFoodActivity
+            val intent = Intent(this, ListFoodActivity::class.java)
+            startActivity(intent)
+            finish() // Menutup ConfirmationActivity setelah kembali ke menu
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

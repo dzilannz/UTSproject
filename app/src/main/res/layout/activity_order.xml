@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#F3F4F6"
     tools:context=".OrderActivity">
 
         <!-- Judul Halaman -->
@@ -18,7 +19,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
 
         <!-- Input Nama Makanan -->
         <TextView
@@ -26,7 +28,8 @@
             android:layout_height="wrap_content"
             android:text="Food Name"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:id="@+id/etFoodName"
@@ -34,7 +37,8 @@
             android:layout_height="wrap_content"
             android:hint="Enter food name - Get From List"
             android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp" />
 
         <!-- Input Jumlah Porsi -->
         <TextView
@@ -42,7 +46,8 @@
             android:layout_height="wrap_content"
             android:text="Number of Servings"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp" />
 
         <EditText
             android:id="@+id/etServings"
@@ -51,25 +56,26 @@
             android:hint="Enter number of servings"
             android:inputType="number"
             android:padding="12dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etFoodName"/>
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp" />
 
-        <!-- Input Jumlah Porsi -->
+        <!-- Input Nama Pemesan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ordering Name"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp" />
+
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ordering name by"
             android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
-
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp" />
 
         <!-- Input Catatan Tambahan -->
         <TextView
@@ -77,14 +83,17 @@
             android:layout_height="wrap_content"
             android:text="Additional Notes"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp" />
+
         <EditText
             android:id="@+id/etNotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter any additional notes"
             android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp" />
 
         <!-- Tombol Order -->
         <Button
@@ -92,7 +101,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Place Order"
-            android:textColor="@android:color/white"
-            android:padding="12dp"/>
+            android:textColor="#FBEEAC"
+            android:background="@drawable/rounded_button"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
 
 </LinearLayout>

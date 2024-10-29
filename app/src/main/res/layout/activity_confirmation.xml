@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#FAFAFA"
     tools:context=".ConfirmationActivity">
 
     <!-- Judul Halaman -->
@@ -14,66 +15,80 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order Food"
+        android:text="Order Confirmation"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#333333"
+        android:layout_marginBottom="20dp" />
 
     <!-- Confirmation Nama Makanan -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvFoodName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Food Name: Batagor"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#555555"
+        android:background="@drawable/rounded_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
 
-    <!-- Confirmation Jumlah Porsi -->
+    <!-- Jumlah Porsi -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvServings"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Number of Servings: 2 pax"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#555555"
+        android:background="@drawable/rounded_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
 
-    <!-- Confirmation Nama pengorder -->
+    <!-- Nama Pengorder -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvOrderingName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ordering Name: Usep"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#555555"
+        android:background="@drawable/rounded_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
 
-    <!-- Input Catatan Tambahan -->
+    <!-- Catatan Tambahan -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAdditionalNotes"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Additional Notes: Tidak Pedas"
         android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#555555"
+        android:background="@drawable/rounded_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
 
-    <!-- Input Catatan Tambahan -->
+    <!-- Thank You Text -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Thanks for your order and please wait for delivering by nearest courier"
+        android:text="Thanks for your order! Please wait for delivery by the nearest courier."
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#28527A"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@drawable/rounded_text_background_light"
+        android:layout_marginBottom="20dp" />
 
+    <!-- Tombol Back to Menu -->
     <Button
         android:id="@+id/backtoMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Menu"/>
-
-    <TextView
-        android:id="@+id/confirmationTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Order Confirmation"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:padding="16dp"/>
+        android:text="Back to Menu"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

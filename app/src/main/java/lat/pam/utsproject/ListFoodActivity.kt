@@ -27,8 +27,11 @@ class ListFoodActivity : AppCompatActivity() {
         foodList = listOf(
             Food("Batagor", "Batagor asli enak dari Bandung", R.drawable.batagor),
             Food("Black Salad", "Salad segar yang dibuat secara langsung", R.drawable.black_salad),
-            Food("Cappucino", "Kopi cappucino asli yang dibuat dari Kopi Arabica", R.drawable.cappuchino)
-        )
+            Food("Cappucino", "Kopi cappucino asli yang dibuat dari Kopi Arabica", R.drawable.cappuchino),
+            Food("Coffee", "Kopi hitam asli tanpa campuran gula atau susu", R.drawable.kopi_hitam),
+            Food("Nasi Goreng", "Nasi goreng dimasak dengan bumbu rempah pilihan terbaik", R.drawable.nasigoreng),
+            Food("Cheesecake", "Cheesecake lembut yang meleleh di mulut, dibuat dari keju krim berkualitas", R.drawable.cheesecake),
+                )
 
         adapter = FoodAdapter(foodList) { selectedFood ->
             val intent = Intent(this, OrderActivity::class.java)
